@@ -1,0 +1,54 @@
+{
+  "list": "iteration-1-cardiovascular",
+  "domain": "The cardiovascular system",
+  "centre": {
+    "object": "pumping-heart",
+    "caption": "The heart pumps blood around two circuits: lungs and body."
+  },
+  "items": [
+    {
+      "id": "chambers",
+      "label": "Four chambers",
+      "fact": "The heart has four chambers. Two atria on top receive blood; two ventricles below pump it out.",
+      "object": "four-blocks"
+    },
+    {
+      "id": "lungs",
+      "label": "Right side to the lungs",
+      "fact": "The right ventricle pumps oxygen-poor blood to the lungs. This is the pulmonary circuit.",
+      "object": "lungs"
+    },
+    {
+      "id": "left-ventricle",
+      "label": "Left ventricle is thickest",
+      "fact": "The left ventricle has the thickest wall because it pumps blood to the whole body. This is the systemic circuit.",
+      "object": "dumbbell"
+    },
+    {
+      "id": "arteries",
+      "label": "Arteries lead away",
+      "fact": "Arteries carry blood away from the heart, under high pressure.",
+      "object": "arrow-out"
+    },
+    {
+      "id": "veins",
+      "label": "Veins have valves",
+      "fact": "Veins carry blood back to the heart. Valves inside them stop it flowing backwards.",
+      "object": "valve-gate"
+    },
+    {
+      "id": "capillaries",
+      "label": "Capillaries are one cell thick",
+      "fact": "Capillary walls are one cell thick, so oxygen and nutrients pass through to the tissues.",
+      "object": "net"
+    }
+  ],
+  "ceiling": {
+    "outliers": [
+      "Outlier: the pulmonary arteries carry oxygen-poor blood. They are still arteries because they lead away from the heart."
+    ],
+    "sources": [
+      "Betts, J. G., et al. (2022). Anatomy and Physiology 2e (ch. 19.1, 20.1). OpenStax."
+    ]
+  }
+}

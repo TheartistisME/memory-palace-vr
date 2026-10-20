@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Memory Palace VR · Iteration 1</title>
+  <link rel="icon" href="data:,">
+  <script src="vendor/aframe.min.js"></script>
+  <script src="scenes.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a-scene renderer="antialias: true" background="color: #10131C" vr-mode-ui="enabled: true" device-orientation-permission-ui="enabled: false">
+    <a-entity light="type: ambient; intensity: 0.75; color: #FFFFFF"></a-entity>
+    <a-entity light="type: directional; intensity: 0.7; color: #FFF4E0" position="1 4 2"></a-entity>
+
+    <!-- The room: built by app.js from one layout so loci, pads and markers never drift apart. -->
+    <a-entity id="room"></a-entity>
+    <a-entity id="panel"></a-entity>
+
+    <!-- Rig: app.js teleports it (D8). No smooth movement. -->
+    <a-entity id="rig" position="0 0 3.2">
+      <a-entity id="cam" camera position="0 1.6 0" look-controls="pointerLockEnabled: false; magicWindowTrackingEnabled: false" wasd-controls="enabled: false"
+                cursor="rayOrigin: mouse" raycaster="objects: .clickable">
+        <a-sphere id="fade" radius="0.25" segments-width="12" segments-height="8"
+                  material="color: #000; shader: flat; side: back; transparent: true; opacity: 0; depthTest: false"
+                  visible="false"></a-sphere>
+      </a-entity>
+      <a-entity laser-controls="hand: right" raycaster="objects: .clickable; far: 20"></a-entity>
+      <a-entity laser-controls="hand: left" raycaster="objects: .clickable; far: 20"></a-entity>
+    </a-entity>
+  </a-scene>
+  <audio id="wrong-sound" src="sounds/wrong.wav" preload="auto"></audio>
+</body>
+</html>
