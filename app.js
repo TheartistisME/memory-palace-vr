@@ -34,7 +34,7 @@ const state = {
   history: [], walkStop: 0, testStop: 0, marks: [], log: null,
 };
 
-// ---------------------------------------------------------------- language and settings (D17, D19)
+// ---------------------------------------------------------------- language and settings (D17, D19, D20)
 // Saved per browser. Language: ?lang= in the link, then the saved choice, then the device language.
 const settings = (() => {
   let saved = {};
@@ -42,7 +42,7 @@ const settings = (() => {
   const codes = I18N.LANGS.map((l) => l.code);
   const device = (navigator.languages || [navigator.language]).map((l) => String(l).slice(0, 2).toLowerCase());
   const lang = [new URLSearchParams(location.search).get("lang"), saved.lang, ...device].find((c) => codes.includes(c)) || "en";
-  return { lang, gentle: !!saved.gentle };
+  return { lang, gentle: !!saved.gentle, sound: saved.sound !== false };
 })();
 
 function saveSettings() {
@@ -317,6 +317,7 @@ function tickScenes() {
       for (const c of e.cues) {
         if (e.prev < Math.floor(t) + c.at && t >= Math.floor(t) + c.at) {
           if (playing) playing.pause();
+          if (!settings.sound) { playing = null; continue; }
           playing = clip(c.clip);
           playing.currentTime = 0;
           playing.play().catch(() => {});
@@ -334,7 +335,7 @@ AFRAME.registerComponent("fact-scenes", { tick: tickScenes });
 let tts = null, pendingFocus = null;
 function readAloud(parts) {
   const synth = window.speechSynthesis;
-  if (!settings.gentle || !synth) return;
+  if (!settings.gentle || !settings.sound || !synth) return;
   const resume = focus || pendingFocus;
   quiet();
   pendingFocus = resume;
@@ -520,13 +521,14 @@ const MENU = { y: 1.12, tilt: -22, side: 0.45 }; // wide menus sit nearer the mi
 
 function intro() {
   state.phase = "intro";
-  state.log = { build: "iteration-1.2", list: DATA.list, started: new Date().toISOString(), xr: false,
-    lang: settings.lang, gentle: settings.gentle, placements: [], marks: [], times: {} };
+  state.log = { build: "iteration-1.3", list: DATA.list, started: new Date().toISOString(), xr: false,
+    lang: settings.lang, gentle: settings.gentle, sound: settings.sound, placements: [], marks: [], times: {} };
   panel({ title: t("appTitle"), body: t("introBody", { domain: domain() }), place: MENU, buttons: [
     [t("start"), encodeStart],
     [t("language"), languagePanel, "#5A6378"],
     [t(settings.gentle ? "gentleOn" : "gentleOff"), toggleGentle, settings.gentle ? "#0D7F7D" : "#5A6378"],
-  ] });
+    [t(settings.sound ? "soundOn" : "soundOff"), toggleSound, settings.sound ? "#0D7F7D" : "#5A6378"],
+  ], cols: 2 });
   speak(centreScene);
 }
 
@@ -556,13 +558,24 @@ function toggleGentle() {
   panel({ title: t("gentleTitle"), body: t("gentleBody"), place: MENU, buttons: [[t("ok"), intro]] });
 }
 
+// D20: sound off silences the voice lines, the miss sounds and gentle mode's read-aloud.
+// The student asked for it because the repeating voice lines can get annoying.
+function toggleSound() {
+  if (state.phase !== "intro") return;
+  settings.sound = !settings.sound;
+  saveSettings();
+  if (!settings.sound && window.speechSynthesis) speechSynthesis.cancel();
+  tts = null;
+  intro();
+}
+
 // D16: Start teaches by doing. Turn to stand 1, light it up, and have the user place the first fact there.
 async function encodeStart() {
   if (state.phase !== "intro") return;
   state.phase = "guide";
   state.t0 = performance.now();
   state.log.xr = scene.renderer.xr.isPresenting;
-  Object.assign(state.log, { lang: settings.lang, gentle: settings.gentle });
+  Object.assign(state.log, { lang: settings.lang, gentle: settings.gentle, sound: settings.sound });
   LOCI.forEach((L, i) => L.ring.setAttribute("visible", i === 0));
   showGuide(0);
   await teleport(START.pos, locusLook(0));
@@ -714,10 +727,10 @@ function testReveal(i) {
 }
 
 // D14: wrong sound, then snap to the stand and object that was missed. Gentle mode uses a soft chime.
+// With sound off (D20) the snap and the panel still show the miss.
 async function missed(i) {
   const s = $(settings.gentle ? "#gentle-sound" : "#wrong-sound");
-  s.currentTime = 0;
-  s.play().catch(() => {});
+  if (settings.sound) { s.currentTime = 0; s.play().catch(() => {}); }
   LOCI[i].ring.setAttribute("visible", false);
   await teleport(LOCI[i].pad, locusLook(i));
   showObject(i, true, true);
