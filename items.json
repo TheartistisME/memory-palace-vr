@@ -10,37 +10,67 @@
       "id": "chambers",
       "label": "Four chambers",
       "fact": "The heart has four chambers. Two atria on top receive blood; two ventricles below pump it out.",
-      "object": "four-blocks"
+      "object": "four-blocks",
+      "stand": {
+        "shape": "blocks",
+        "color": "#B8424C",
+        "accent": "#C98A9E"
+      }
     },
     {
       "id": "lungs",
       "label": "Right side to the lungs",
       "fact": "The right ventricle pumps oxygen-poor blood to the lungs. This is the pulmonary circuit.",
-      "object": "lungs"
+      "object": "lungs",
+      "stand": {
+        "shape": "lobes",
+        "color": "#E89AA6",
+        "accent": "#F1E4CF"
+      }
     },
     {
       "id": "left-ventricle",
       "label": "Left ventricle is thickest",
       "fact": "The left ventricle has the thickest wall because it pumps blood to the whole body. This is the systemic circuit.",
-      "object": "dumbbell"
+      "object": "dumbbell",
+      "stand": {
+        "shape": "heavy",
+        "color": "#7A2E36",
+        "accent": "#B8424C"
+      }
     },
     {
       "id": "arteries",
       "label": "Arteries lead away",
       "fact": "Arteries carry blood away from the heart, under high pressure.",
-      "object": "arrow-out"
+      "object": "arrow-out",
+      "stand": {
+        "shape": "tapered",
+        "color": "#C9545C",
+        "accent": "#FFE36B"
+      }
     },
     {
       "id": "veins",
       "label": "Veins have valves",
       "fact": "Veins carry blood back to the heart. Valves inside them stop it flowing backwards.",
-      "object": "valve-gate"
+      "object": "valve-gate",
+      "stand": {
+        "shape": "barred",
+        "color": "#4F74C4",
+        "accent": "#C8D6F5"
+      }
     },
     {
       "id": "capillaries",
       "label": "Capillaries are one cell thick",
       "fact": "Capillary walls are one cell thick, so oxygen and nutrients pass through to the tissues.",
-      "object": "net"
+      "object": "net",
+      "stand": {
+        "shape": "lattice",
+        "color": "#2FA88A",
+        "accent": "#E2AA8C"
+      }
     }
   ],
   "ceiling": {
@@ -50,5 +80,403 @@
     "sources": [
       "Betts, J. G., et al. (2022). Anatomy and Physiology 2e (ch. 19.1, 20.1). OpenStax."
     ]
+  },
+  "translations": {
+    "es": {
+      "domain": "El sistema cardiovascular",
+      "caption": "El corazón bombea sangre por dos circuitos: los pulmones y el cuerpo.",
+      "items": {
+        "chambers": [
+          "Cuatro cavidades",
+          "El corazón tiene cuatro cavidades. Dos aurículas arriba reciben la sangre; dos ventrículos abajo la bombean hacia fuera."
+        ],
+        "lungs": [
+          "El lado derecho, a los pulmones",
+          "El ventrículo derecho bombea sangre pobre en oxígeno a los pulmones. Es el circuito pulmonar."
+        ],
+        "left-ventricle": [
+          "El ventrículo izquierdo es el más grueso",
+          "El ventrículo izquierdo tiene la pared más gruesa porque bombea sangre a todo el cuerpo. Es el circuito sistémico."
+        ],
+        "arteries": [
+          "Las arterias se alejan",
+          "Las arterias llevan la sangre lejos del corazón, a alta presión."
+        ],
+        "veins": [
+          "Las venas tienen válvulas",
+          "Las venas devuelven la sangre al corazón. Sus válvulas impiden que fluya hacia atrás."
+        ],
+        "capillaries": [
+          "Los capilares miden una célula de grosor",
+          "Las paredes de los capilares tienen una sola célula de grosor, así que el oxígeno y los nutrientes pasan a los tejidos."
+        ]
+      },
+      "outliers": [
+        "Excepción: las arterias pulmonares llevan sangre pobre en oxígeno. Siguen siendo arterias porque se alejan del corazón."
+      ]
+    },
+    "fr": {
+      "domain": "Le système cardiovasculaire",
+      "caption": "Le cœur pompe le sang dans deux circuits : les poumons et le corps.",
+      "items": {
+        "chambers": [
+          "Quatre cavités",
+          "Le cœur a quatre cavités. Deux oreillettes en haut reçoivent le sang ; deux ventricules en bas l'expulsent."
+        ],
+        "lungs": [
+          "Le côté droit vers les poumons",
+          "Le ventricule droit pompe le sang pauvre en oxygène vers les poumons. C'est la circulation pulmonaire."
+        ],
+        "left-ventricle": [
+          "Le ventricule gauche est le plus épais",
+          "Le ventricule gauche a la paroi la plus épaisse car il pompe le sang vers tout le corps. C'est la circulation systémique."
+        ],
+        "arteries": [
+          "Les artères s'éloignent",
+          "Les artères transportent le sang loin du cœur, sous haute pression."
+        ],
+        "veins": [
+          "Les veines ont des valvules",
+          "Les veines ramènent le sang au cœur. Leurs valvules l'empêchent de refluer."
+        ],
+        "capillaries": [
+          "Les capillaires font une cellule d'épaisseur",
+          "La paroi des capillaires n'a qu'une cellule d'épaisseur, donc l'oxygène et les nutriments passent dans les tissus."
+        ]
+      },
+      "outliers": [
+        "Exception : les artères pulmonaires transportent du sang pauvre en oxygène. Ce sont quand même des artères, car elles partent du cœur."
+      ]
+    },
+    "de": {
+      "domain": "Das Herz-Kreislauf-System",
+      "caption": "Das Herz pumpt Blut durch zwei Kreisläufe: Lunge und Körper.",
+      "items": {
+        "chambers": [
+          "Vier Herzräume",
+          "Das Herz hat vier Räume. Zwei Vorhöfe oben nehmen Blut auf; zwei Kammern unten pumpen es hinaus."
+        ],
+        "lungs": [
+          "Rechte Seite zur Lunge",
+          "Die rechte Kammer pumpt sauerstoffarmes Blut zur Lunge. Das ist der Lungenkreislauf."
+        ],
+        "left-ventricle": [
+          "Linke Kammer ist am dicksten",
+          "Die linke Kammer hat die dickste Wand, weil sie Blut in den ganzen Körper pumpt. Das ist der Körperkreislauf."
+        ],
+        "arteries": [
+          "Arterien führen weg",
+          "Arterien führen Blut unter hohem Druck vom Herzen weg."
+        ],
+        "veins": [
+          "Venen haben Klappen",
+          "Venen führen Blut zum Herzen zurück. Klappen in ihnen verhindern, dass es zurückfließt."
+        ],
+        "capillaries": [
+          "Kapillaren sind eine Zelle dick",
+          "Kapillarwände sind nur eine Zelle dick, so gelangen Sauerstoff und Nährstoffe ins Gewebe."
+        ]
+      },
+      "outliers": [
+        "Ausnahme: Die Lungenarterien führen sauerstoffarmes Blut. Sie sind trotzdem Arterien, weil sie vom Herzen wegführen."
+      ]
+    },
+    "it": {
+      "domain": "L'apparato cardiovascolare",
+      "caption": "Il cuore pompa il sangue in due circuiti: polmoni e corpo.",
+      "items": {
+        "chambers": [
+          "Quattro cavità",
+          "Il cuore ha quattro cavità. I due atri in alto ricevono il sangue; i due ventricoli in basso lo pompano fuori."
+        ],
+        "lungs": [
+          "Il lato destro va ai polmoni",
+          "Il ventricolo destro pompa sangue povero di ossigeno ai polmoni. È la circolazione polmonare."
+        ],
+        "left-ventricle": [
+          "Il ventricolo sinistro è il più spesso",
+          "Il ventricolo sinistro ha la parete più spessa perché pompa il sangue in tutto il corpo. È la circolazione sistemica."
+        ],
+        "arteries": [
+          "Le arterie si allontanano",
+          "Le arterie portano il sangue lontano dal cuore, ad alta pressione."
+        ],
+        "veins": [
+          "Le vene hanno valvole",
+          "Le vene riportano il sangue al cuore. Le valvole al loro interno impediscono che scorra all'indietro."
+        ],
+        "capillaries": [
+          "I capillari sono spessi una cellula",
+          "Le pareti dei capillari sono spesse una sola cellula, così ossigeno e nutrienti passano ai tessuti."
+        ]
+      },
+      "outliers": [
+        "Eccezione: le arterie polmonari trasportano sangue povero di ossigeno. Sono comunque arterie perché si allontanano dal cuore."
+      ]
+    },
+    "pt": {
+      "domain": "O sistema cardiovascular",
+      "caption": "O coração bombeia sangue por dois circuitos: pulmões e corpo.",
+      "items": {
+        "chambers": [
+          "Quatro cavidades",
+          "O coração tem quatro cavidades. Dois átrios em cima recebem o sangue; dois ventrículos embaixo o bombeiam para fora."
+        ],
+        "lungs": [
+          "Lado direito para os pulmões",
+          "O ventrículo direito bombeia sangue pobre em oxigênio para os pulmões. Este é o circuito pulmonar."
+        ],
+        "left-ventricle": [
+          "O ventrículo esquerdo é o mais grosso",
+          "O ventrículo esquerdo tem a parede mais grossa porque bombeia sangue para o corpo todo. Este é o circuito sistêmico."
+        ],
+        "arteries": [
+          "Artérias levam para longe",
+          "As artérias levam o sangue para longe do coração, sob alta pressão."
+        ],
+        "veins": [
+          "Veias têm válvulas",
+          "As veias trazem o sangue de volta ao coração. Válvulas dentro delas impedem que ele volte."
+        ],
+        "capillaries": [
+          "Capilares têm uma célula de espessura",
+          "As paredes dos capilares têm uma célula de espessura, então oxigênio e nutrientes passam para os tecidos."
+        ]
+      },
+      "outliers": [
+        "Exceção: as artérias pulmonares levam sangue pobre em oxigênio. Mesmo assim são artérias, porque saem do coração."
+      ]
+    },
+    "zh": {
+      "domain": "心血管系统",
+      "caption": "心脏把血液泵入两条循环：肺和全身。",
+      "items": {
+        "chambers": [
+          "四个腔室",
+          "心脏有四个腔室。上面两个心房接收血液；下面两个心室把血液泵出去。"
+        ],
+        "lungs": [
+          "右侧通向肺",
+          "右心室把缺氧的血液泵到肺部。这是肺循环。"
+        ],
+        "left-ventricle": [
+          "左心室壁最厚",
+          "左心室的壁最厚，因为它要把血液泵到全身。这是体循环。"
+        ],
+        "arteries": [
+          "动脉离开心脏",
+          "动脉在高压下把血液从心脏运走。"
+        ],
+        "veins": [
+          "静脉有瓣膜",
+          "静脉把血液送回心脏。静脉里的瓣膜防止血液倒流。"
+        ],
+        "capillaries": [
+          "毛细血管只有一层细胞厚",
+          "毛细血管壁只有一层细胞厚，所以氧气和养分能穿过它进入组织。"
+        ]
+      },
+      "outliers": [
+        "例外：肺动脉运送的是缺氧血。它们仍然是动脉，因为它们从心脏出发。"
+      ]
+    },
+    "ja": {
+      "domain": "循環器系",
+      "caption": "心臓は血液を2つの回路に送り出します：肺と全身。",
+      "items": {
+        "chambers": [
+          "4つの部屋",
+          "心臓には4つの部屋があります。上の2つの心房が血液を受け取り、下の2つの心室が送り出します。"
+        ],
+        "lungs": [
+          "右側は肺へ",
+          "右心室は酸素の少ない血液を肺へ送ります。これが肺循環です。"
+        ],
+        "left-ventricle": [
+          "左心室の壁がいちばん厚い",
+          "左心室は全身に血液を送るため、壁がいちばん厚くなっています。これが体循環です。"
+        ],
+        "arteries": [
+          "動脈は心臓から出ていく",
+          "動脈は高い圧力で血液を心臓から運び出します。"
+        ],
+        "veins": [
+          "静脈には弁がある",
+          "静脈は血液を心臓へ戻します。中の弁が逆流を防ぎます。"
+        ],
+        "capillaries": [
+          "毛細血管は細胞1層分の厚さ",
+          "毛細血管の壁は細胞1層分の厚さしかないので、酸素と栄養が組織へ通り抜けます。"
+        ]
+      },
+      "outliers": [
+        "例外：肺動脈は酸素の少ない血液を運びます。それでも心臓から出ていくので動脈です。"
+      ]
+    },
+    "ko": {
+      "domain": "심혈관계",
+      "caption": "심장은 두 개의 순환로로 혈액을 내보냅니다: 폐와 온몸.",
+      "items": {
+        "chambers": [
+          "네 개의 방",
+          "심장에는 방이 네 개 있습니다. 위쪽의 심방 두 개가 혈액을 받고, 아래쪽의 심실 두 개가 혈액을 내보냅니다."
+        ],
+        "lungs": [
+          "오른쪽은 폐로",
+          "우심실은 산소가 적은 혈액을 폐로 보냅니다. 이것이 폐순환입니다."
+        ],
+        "left-ventricle": [
+          "좌심실 벽이 가장 두껍다",
+          "좌심실은 온몸으로 혈액을 보내기 때문에 벽이 가장 두껍습니다. 이것이 체순환입니다."
+        ],
+        "arteries": [
+          "동맥은 심장에서 나간다",
+          "동맥은 높은 압력으로 혈액을 심장에서 멀리 운반합니다."
+        ],
+        "veins": [
+          "정맥에는 판막이 있다",
+          "정맥은 혈액을 심장으로 되돌려 보냅니다. 안쪽의 판막이 혈액이 거꾸로 흐르지 않게 막습니다."
+        ],
+        "capillaries": [
+          "모세혈관은 세포 한 층 두께",
+          "모세혈관 벽은 세포 한 층 두께라서 산소와 영양분이 조직으로 통과합니다."
+        ]
+      },
+      "outliers": [
+        "예외: 폐동맥은 산소가 적은 혈액을 운반합니다. 그래도 심장에서 나가므로 동맥입니다."
+      ]
+    },
+    "hi": {
+      "domain": "हृदय-संवहनी तंत्र",
+      "caption": "हृदय रक्त को दो परिपथों में पंप करता है: फेफड़े और शरीर।",
+      "items": {
+        "chambers": [
+          "चार कक्ष",
+          "हृदय में चार कक्ष होते हैं। ऊपर के दो आलिंद रक्त लेते हैं; नीचे के दो निलय उसे बाहर पंप करते हैं।"
+        ],
+        "lungs": [
+          "दायाँ भाग फेफड़ों की ओर",
+          "दायाँ निलय कम ऑक्सीजन वाला रक्त फेफड़ों में पंप करता है। यह फुफ्फुसीय परिसंचरण है।"
+        ],
+        "left-ventricle": [
+          "बायाँ निलय सबसे मोटा",
+          "बाएँ निलय की दीवार सबसे मोटी होती है क्योंकि वह पूरे शरीर में रक्त पंप करता है। यह दैहिक परिसंचरण है।"
+        ],
+        "arteries": [
+          "धमनियाँ दूर ले जाती हैं",
+          "धमनियाँ उच्च दबाव पर रक्त को हृदय से दूर ले जाती हैं।"
+        ],
+        "veins": [
+          "शिराओं में वाल्व होते हैं",
+          "शिराएँ रक्त को वापस हृदय तक लाती हैं। उनके अंदर के वाल्व रक्त को उल्टा बहने से रोकते हैं।"
+        ],
+        "capillaries": [
+          "केशिकाएँ एक कोशिका मोटी",
+          "केशिकाओं की दीवार सिर्फ़ एक कोशिका मोटी होती है, इसलिए ऑक्सीजन और पोषक तत्व ऊतकों तक पहुँच जाते हैं।"
+        ]
+      },
+      "outliers": [
+        "अपवाद: फुफ्फुसीय धमनियाँ कम ऑक्सीजन वाला रक्त ले जाती हैं। फिर भी वे धमनियाँ हैं, क्योंकि वे हृदय से दूर जाती हैं।"
+      ]
+    },
+    "ar": {
+      "domain": "الجهاز القلبي الوعائي",
+      "caption": "يضخ القلب الدم في دورتين: الرئتين والجسم.",
+      "items": {
+        "chambers": [
+          "أربع حجرات",
+          "للقلب أربع حجرات. أذينان في الأعلى يستقبلان الدم، وبُطينان في الأسفل يضخانه إلى الخارج."
+        ],
+        "lungs": [
+          "الجانب الأيمن إلى الرئتين",
+          "يضخ البطين الأيمن الدم الفقير بالأكسجين إلى الرئتين. هذه هي الدورة الرئوية."
+        ],
+        "left-ventricle": [
+          "البطين الأيسر هو الأسمك",
+          "جدار البطين الأيسر هو الأسمك لأنه يضخ الدم إلى الجسم كله. هذه هي الدورة الجهازية."
+        ],
+        "arteries": [
+          "الشرايين تخرج من القلب",
+          "تحمل الشرايين الدم بعيدًا عن القلب تحت ضغط مرتفع."
+        ],
+        "veins": [
+          "للأوردة صمامات",
+          "تعيد الأوردة الدم إلى القلب. تمنع الصمامات داخلها رجوع الدم إلى الخلف."
+        ],
+        "capillaries": [
+          "الشعيرات الدموية بسماكة خلية واحدة",
+          "جدران الشعيرات الدموية بسماكة خلية واحدة، فيعبر الأكسجين والمغذيات إلى الأنسجة."
+        ]
+      },
+      "outliers": [
+        "استثناء: تحمل الشرايين الرئوية دمًا فقيرًا بالأكسجين. لكنها تبقى شرايين لأنها تخرج من القلب."
+      ]
+    },
+    "vi": {
+      "domain": "Hệ tim mạch",
+      "caption": "Tim bơm máu đi theo hai vòng tuần hoàn: phổi và cơ thể.",
+      "items": {
+        "chambers": [
+          "Bốn ngăn",
+          "Tim có bốn ngăn. Hai tâm nhĩ ở trên nhận máu; hai tâm thất ở dưới bơm máu đi."
+        ],
+        "lungs": [
+          "Bên phải lên phổi",
+          "Tâm thất phải bơm máu nghèo oxy lên phổi. Đây là vòng tuần hoàn phổi."
+        ],
+        "left-ventricle": [
+          "Tâm thất trái dày nhất",
+          "Tâm thất trái có thành dày nhất vì nó bơm máu đi khắp cơ thể. Đây là vòng tuần hoàn hệ thống."
+        ],
+        "arteries": [
+          "Động mạch đi ra",
+          "Động mạch đưa máu ra khỏi tim dưới áp lực cao."
+        ],
+        "veins": [
+          "Tĩnh mạch có van",
+          "Tĩnh mạch đưa máu trở về tim. Các van bên trong ngăn máu chảy ngược."
+        ],
+        "capillaries": [
+          "Mao mạch dày một tế bào",
+          "Thành mao mạch chỉ dày một tế bào, nên oxy và chất dinh dưỡng đi qua vào các mô."
+        ]
+      },
+      "outliers": [
+        "Ngoại lệ: động mạch phổi mang máu nghèo oxy. Chúng vẫn là động mạch vì chúng đi ra khỏi tim."
+      ]
+    },
+    "id": {
+      "domain": "Sistem kardiovaskular",
+      "caption": "Jantung memompa darah melalui dua sirkuit: paru-paru dan tubuh.",
+      "items": {
+        "chambers": [
+          "Empat ruang",
+          "Jantung punya empat ruang. Dua serambi di atas menerima darah; dua bilik di bawah memompanya keluar."
+        ],
+        "lungs": [
+          "Sisi kanan ke paru-paru",
+          "Bilik kanan memompa darah miskin oksigen ke paru-paru. Inilah sirkulasi paru."
+        ],
+        "left-ventricle": [
+          "Bilik kiri paling tebal",
+          "Bilik kiri punya dinding paling tebal karena memompa darah ke seluruh tubuh. Inilah sirkulasi sistemik."
+        ],
+        "arteries": [
+          "Arteri menjauh",
+          "Arteri membawa darah menjauhi jantung dengan tekanan tinggi."
+        ],
+        "veins": [
+          "Vena punya katup",
+          "Vena membawa darah kembali ke jantung. Katup di dalamnya mencegah darah mengalir balik."
+        ],
+        "capillaries": [
+          "Kapiler setebal satu sel",
+          "Dinding kapiler hanya setebal satu sel, sehingga oksigen dan nutrisi bisa masuk ke jaringan."
+        ]
+      },
+      "outliers": [
+        "Pengecualian: arteri pulmonalis membawa darah miskin oksigen. Tetap disebut arteri karena menjauhi jantung."
+      ]
+    }
   }
 }
